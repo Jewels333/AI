@@ -11,9 +11,20 @@ if option1 == '1':
     return answer
 
 
-  def subtract(num1,hum2):
+  def subtract(num1,num2):
     answer = num1 - num2
     return answer
+
+
+  def multiply(num1,num2):
+    answer = num1 * num2
+    return answer
+
+
+  def divide(num1,num2):
+    answer = num1 / num2
+    return answer
+
   first = int(input("Enter your first number: "))
   second = int(input("Enter your second number: "))
 
@@ -23,10 +34,13 @@ if option1 == '1':
   if choice == 1:
     answer = add(first,second)
 
-  if choice == 2:
+  elif choice == 2:
     answer = subtract(first, second)
 
-
+  elif choice == 3:
+    answer = divide(first, second)
+  elif choice == 4:
+    answer = multiply(first, second)
   print("The answer is",answer)
 
 ##TASK 1: Add 2 more functions to the calcluator
