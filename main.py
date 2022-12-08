@@ -1,6 +1,6 @@
 aiName1 = 'Mark'
 aiName2 = 'Patrica'
-print('Hello World')
+print('Hello')
 name = input('Whats your name?')
 print('Hi', name)
 print('What do you need?')
@@ -56,3 +56,5 @@ if option1 == '2':
 if option1 == '3':
   from tkinter import *
   from tkinter import ttk
+  print('Unfinished')
+ #tk.Tk = window
