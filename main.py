@@ -4,7 +4,7 @@ print('Hello')
 name = input('Whats your name?')
 print('Hi', name)
 print('What do you need?')
-option1 = input('(1) Math (2)Coming soon (3)GUI')
+option1 = input('(1) Math (2) Account(3) GUI')
 if option1 == '1':
   def add(num1,num2):
     answer = num1 + num2
@@ -49,12 +49,34 @@ if option1 == '1':
 #Complete the if / elif blocks to finish the program
 
 if option1 == '2':
-    f = open("errors/error.txt", "r")
-    print(f.read()) 
-    f.close()
-    print("Dont't choose this next time.")
-if option1 == '3':
-  from tkinter import *
-  from tkinter import ttk
-  print('Unfinished')
- #tk.Tk = window
+  option2 = input(' (1) New User (2) Login')
+  if option2 == '1':
+    userName = input('Enter username:')
+    passWord = input('Enter password:')
+    folderAccounts = 'accounts/'
+    f = open(folderAccounts + userName + ".txt", "x")
+    f = open(folderAccounts + userName + ".txt", "w")
+    
+    f.write(passWord)
+    
+  if option2 == '2':
+    loginUser = input('Enter Username:')
+    folderAccounts = 'accounts/'
+    
+    loginPass = input('Enter Password:')
+    
+    f = open(folderAccounts + loginUser + ".txt", "r")
+    fullstring = f.readline()
+    substring = loginPass
+
+    if substring in fullstring:
+      print("Logged in.")
+    else:
+      print("Incorrect Password")
+    #if loginPass == '':
+      #print('login successful')
+    #else:
+      #print('Login unsuccessful')
+   
+
+    
