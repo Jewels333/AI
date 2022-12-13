@@ -68,11 +68,20 @@ if option1 == '2':
     f = open(folderAccounts + loginUser + ".txt", "r")
     fullstring = f.readline()
     substring = loginPass
+    account = folderAccounts + loginUser + '.txt'
 
     if substring in fullstring:
       print("Logged in.")
       #start new
-      option3 = input('')
+      
+      option3 = input('(1) Check Accounts')
+      if option3 == '1':
+        checkedUser = input('What account do you want to check?')
+        f = open(folderAccounts + checkedUser + ".txt", "r")
+        print(f.read())
+        print('1: password 2: type of account 3: ID')
+
+        
     else:
       print("Incorrect Password")
     #if loginPass == '':
