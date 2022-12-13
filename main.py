@@ -72,7 +72,7 @@ if option1 == '2':
     if substring in fullstring:
       print("Logged in.")
       #start new
-      
+      option3 = input('')
     else:
       print("Incorrect Password")
     #if loginPass == '':
