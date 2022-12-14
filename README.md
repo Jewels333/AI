@@ -2,7 +2,4 @@
 
 <h2>DO NOT OPEN WITHOUT ACCESS KEY.</h2>
 
-<p>Current Admin Accounts</p>
-<p>Jewels</p>
-<p>legobuzz5697</p>
-<p>yutubi06</p>
+<p>(Key to be added later)</p>
