@@ -59,10 +59,12 @@ if option1 == '2':
     f = open(folderAccounts + userName + ".txt", "w")
     import random
     f.write(passWord)
-    id = random.randint(0, 999)
-    f.write('user account')
     
-    f.write(id)
+    
+    f.write('user account')
+    r1 = random.randint(1, 999)
+    f.write("ID is % s" % (r1))
+    
   if option2 == '2':
     loginUser = input('Enter Username:')
     folderAccounts = 'accounts/'
