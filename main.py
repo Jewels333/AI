@@ -61,10 +61,13 @@ if option1 == '2':
     f.write(passWord)
     
     
-    f.write('user account')
+    #f.write('user account')
     r1 = random.randint(1, 999)
-    f.write("ID is % s" % (r1))
-    
+    #f.write("ID is % s" % (r1))
+    userInfo = ('''
+user account
+ID is % s'''% (r1))
+    f.write(userInfo)
   if option2 == '2':
     loginUser = input('Enter Username:')
     folderAccounts = 'accounts/'
@@ -76,17 +79,22 @@ if option1 == '2':
     substring = loginPass
     account = folderAccounts + loginUser + '.txt'
 
-    if substring in fullstring:
+    if substring == fullstring:
       print("Logged in.")
       #start new
+      substring2 = 'admin account'
+      f = open( folderAccounts + loginUser + ".txt", "r")
+      fullstring2 = f.readline(2)
+      if fullstring2 == substring2:
+        option3 = input('(1) Check Accounts')
+        if option3 == '1':
+          checkedUser = input('What account do you want to check?')
+          f = open(folderAccounts + checkedUser + ".txt", "r")
+          print(f.read())
+          wprint('1: password 2: type of account 3: ID')
+      else:
+        print('Come back later.')
       
-      option3 = input('(1) Check Accounts')
-      if option3 == '1':
-        checkedUser = input('What account do you want to check?')
-        f = open(folderAccounts + checkedUser + ".txt", "r")
-        print(f.read())
-        print('1: password 2: type of account 3: ID')
-
         
     else:
       print("Incorrect Password")
