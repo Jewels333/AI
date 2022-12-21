@@ -79,29 +79,38 @@ ID is % s'''% (r1))
     substring = loginPass
     account = folderAccounts + loginUser + '.txt'
 
-    if substring == fullstring:
+    if substring in fullstring:
       print("Logged in.")
       #start new
       substring2 = 'admin account'
       f = open( folderAccounts + loginUser + ".txt", "r")
-      fullstring2 = f.readline(2)
-      if fullstring2 == substring2:
-        option3 = input('(1) Check Accounts')
+      fullstring2 = 'admin account'
+      if substring2 == fullstring2:
+        option3 = input('(1) Check Accounts (2) Talk ')
         if option3 == '1':
           checkedUser = input('What account do you want to check?')
           f = open(folderAccounts + checkedUser + ".txt", "r")
           print(f.read())
-          wprint('1: password 2: type of account 3: ID')
+          print('1: password 2: type of account 3: ID')
+        if option3 == '2':
+          r2 = random.randint(1, 6)
+          f = open('ai/greetings/greetings.txt')
+          intentsFolderGreeting = f = open('ai/greetings/greetings.txt')
+          # read the content of the file opened
+          content = f.readlines()
+  
+          # read random line from the file
+          
+          print(content[r2])
+          userResponse1 = input('')
+          if userResponse1 in intentsFolderGreeting:
+            print()
       else:
-        print('Come back later.')
-      
-        
-    else:
-      print("Incorrect Password")
-    #if loginPass == '':
-      #print('login successful')
-    #else:
-      #print('Login unsuccessful')
+        print("Incorrect Password")
+      #if loginPass == '':
+        #print('login successful')
+      #else:
+        #print('Login unsuccessful')
    
 
     
