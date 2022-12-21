@@ -95,7 +95,7 @@ ID is % s'''% (r1))
         if option3 == '2':
           r2 = random.randint(1, 6)
           f = open('ai/greetings/greetings.txt')
-          intentsFolderGreeting = f = open('ai/greetings/greetings.txt')
+          intentsFolderGreeting = f.read()
           # read the content of the file opened
           content = f.readlines()
   
@@ -104,7 +104,10 @@ ID is % s'''% (r1))
           print(content[r2])
           userResponse1 = input('')
           if userResponse1 in intentsFolderGreeting:
-            print()
+            r3 = random.randint(1,3)
+            f = open('ai/questions/where-you-going.txt')
+            content = f.readlines()
+            print(content[r3])
       else:
         print("Incorrect Password")
       #if loginPass == '':
