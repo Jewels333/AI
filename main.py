@@ -105,7 +105,7 @@ ID is % s'''% (r1))
           userResponse1 = input('')
           if userResponse1 in intentsFolderGreeting:
             r3 = random.randint(1,3)
-            f = open('ai/questions/where-you-going.txt')
+            f = open('ai/questions/how-are-you.txt')
             content2 = f.readlines()
             print(content2[r3])
       else:
