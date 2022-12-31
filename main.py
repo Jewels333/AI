@@ -93,7 +93,7 @@ ID is % s'''% (r1))
           print(f.read())
           print('1: password 2: type of account 3: ID')
         if option3 == '2':
-          r2 = random.randint(1, 6)
+          r2 = int(random.randint(1, 6))
           f = open('ai/greetings/greetings.txt')
           intentsFolderGreeting = f.read()
           # read the content of the file opened
