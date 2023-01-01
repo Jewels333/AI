@@ -12,14 +12,19 @@ if AccessInput == AccessKey:
     terminalFolder = 'terminal/'
     accountsFolder = 'accounts/'
 
-    f = open( terminalFolder + accountsFolder + LoginName + ".key")
-
-    Password = f.readline() #* It has the correct info, not matching correctly
-    if Password == LoginPass: #! 
+    f = open(terminalFolder + accountsFolder + LoginName + ".key", "r")
+    length1 = 1
+    Password = (f.readline())
+    PasswordLen = len(Password) - 1
+    Password = Password[:PasswordLen]
+    f.close()    
+    if LoginPass == Password: #* Issue resovled
         print('logged in')
+        
     else:
-        print('Incorrect')
+        print('Incorrect.')
         print(Password)
+        print(PasswordLen)
         print(LoginPass)
 else:
     print('Incorrect.')
