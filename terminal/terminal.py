@@ -17,9 +17,51 @@ if AccessInput == AccessKey:
     Password = (f.readline())
     PasswordLen = len(Password) - 1
     Password = Password[:PasswordLen]
-    f.close()    
+    f.close()
+
     if LoginPass == Password: #* Issue resovled
-        print('logged in')
+
+        print('Logged in.')
+
+        menu1 = input('(1) Manage Accounts\n(2) Edit Files\n')
+        if menu1 == '1':
+            accountManaged = input('What account to manage?')
+            try:
+                f.open(terminalFolder + accountsFolder + accountManaged + ".key")
+                # TODO: finish menu
+                accountMenu = input('Would you like to:\nR)ead info\nA)dd info')
+                if accountMenu == 'R':
+                    f.read()
+                elif accountMenu == 'A':
+                    infoAdd = input('What to add?')
+                    f.append(infoAdd)
+            except:
+                print('Account not found.')
+
+        elif menu1 == '2':
+            print('Editing Files.')
+            fileToEdit = input('Enter file to edit:\n')
+            try:
+                f = open(fileToEdit)
+                editStyle = input('Would you like to:\nA)ppend\nW)rite\nR)ead\n')
+                if editStyle == 'A':
+                    appendValue = input('What to add?')
+                    f.append('\n' + appendValue)
+                    print('Added.')
+                elif editStyle == 'W':
+                    writeValue = input('What to write?')
+                    f.write(writeValue)
+                    print('Written.')
+                elif editStyle == 'R':
+                    print(f.read())
+                    print('Read.')
+            except:
+                noFileFound = input('No file found. Create? (Y/N)\n')
+                if noFileFound == 'Y':
+                    f = open(fileToEdit, "x")
+                    print('Created, try again.')
+                else:
+                    print('Canceled.')
         
     else:
         print('Incorrect.')
