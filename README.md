@@ -1,5 +1,4 @@
 <h1> These are the hidden files of Scripted's AI. </h1>
-
 <h2>DO NOT OPEN WITHOUT ACCESS KEY.</h2>
+<p>Use the terminal to access most operation.</p>
 
-<p>(Key to be added later)</p>
