@@ -67,22 +67,27 @@ if AccessInput == AccessKey:
             except:
                
                 noFileFound = input('No file found. Create? (Y/N)\n')
+                
                 if noFileFound == 'Y':
                     f = open(fileToEdit, "x")
                     print('Created, try again.')
+
                 else:
                     print('Canceled.')
         elif menu1 == '3':
             import time
             import sys
             import socket
+
             new_socket = socket.socket()
             host_name = socket.gethostname()
             s_ip = socket.gethostbyname(host_name)
             port = 8080
             new_socket.bind((host_name, port))
+
             print( "Binding successful!" )
             print("This is your IP: ", s_ip)
+
             name = LoginName
             new_socket.listen(1)
             conn, add= new_socket.accept()
@@ -91,6 +96,7 @@ if AccessInput == AccessKey:
             client = (conn.recv(1024)).decode()
             print(client + ' has connected.')
             conn.send(name.encode())
+            
             while True:
                 message = input('Me : ')
                 conn.send(message.encode())
