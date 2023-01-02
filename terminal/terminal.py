@@ -69,7 +69,7 @@ if AccessInput == AccessKey:
                 noFileFound = input('No file found. Create? (Y/N)\n')
                 
                 if noFileFound == 'Y':
-                    f = open(fileToEdit, "x")
+                    f = open(fileToEdit + '.txt', "x")
                     print('Created, try again.')
 
                 else:
