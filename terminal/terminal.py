@@ -31,7 +31,7 @@ if AccessInput == AccessKey:
                 
                 f.open(terminalFolder + accountsFolder + accountManaged + ".key")
                 
-                # TODO: finish menu
+               
                 accountMenu = input('Would you like to:\nR)ead info\nA)dd info')
                 
                 if accountMenu == 'R':
@@ -80,8 +80,6 @@ if AccessInput == AccessKey:
             f.close()
     else:
         print('Incorrect.')
-        print(Password)
-        print(PasswordLen)
-        print(LoginPass)
+        
 else:
     print('Incorrect.')
