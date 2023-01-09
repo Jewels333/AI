@@ -10,7 +10,7 @@ crsr = connection.cursor()
 sql_command = """CREATE TABLE Users (
     UserID int,
     UserName varchar(255)
-    PassWord varchar(255))"""
+    Password varchar(255))"""
 
 crsr.execute(sql_command)
  
