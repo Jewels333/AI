@@ -7,7 +7,8 @@ connection = sqlite3.connect("accountServer.db")
 crsr = connection.cursor()
  
 
-sql_command = """"""
+sql_command = """CREATE TABLE Users (
+    UserID int)"""
 
 crsr.execute(sql_command)
  
