@@ -22,7 +22,8 @@ if LoginPass == Password:
             roomsMenu = input('Enter room name:')
             
             print('Connecting...')
-            f = open ( 'apps/chat/rooms/' + roomsMenu + '.txt', 'a')
+            toOpen = 'apps/chat/rooms/' + roomsMenu + '.txt'
+            f = open ( toOpen, 'a')
             time.sleep(5)
             server = f.read()
             active = True 
@@ -32,7 +33,7 @@ if LoginPass == Password:
                     f.read()
                 else:
                     f.write(messageInput)
-                    f.commit()
+                    f.flush()
         except:
             print('Room not found.')
             print(f)
