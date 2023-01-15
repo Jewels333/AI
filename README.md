@@ -3,8 +3,7 @@
 
 <h2>Contributors</h2>
 
-<p>
-    Jewels - Lead Developer
-    LegoBuzz & Xn1vity - Web Developers
-</p>
+<p>Jewels - Lead Developer</p>
 
+
+<p>LegoBuzz & Xn1vity - Web Developers</p>
