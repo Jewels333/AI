@@ -1,15 +1,30 @@
+
+
 supportWord = 'i', 'am', 'you'
 context = ''
+def define(word, context, base):
+    definition = ''
+    context = ''
+    f = open('programs/.env/databases/server')
+    database = f.read()
+    
+
+
+
+
 def extract(str):
     extracted = ''
     context = ''
-    extracted = str.split()
-    wordList = extracted
-    word = ['',]
-    
-    extracted = wordList
+    wordList = str.split()
+    wordDigit = int(len(wordList))
+    x = 1
+    for x in range(0, wordDigit):
+        word = wordList.slice(x)
+        if word != supportWord:
+            extracted = extracted + word
+        else:
+            word.slice()
+        x = x + 1
     print(extracted)
 
-print(extract('Hi, i am jewels'))
-    
-
+        
