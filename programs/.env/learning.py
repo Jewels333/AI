@@ -1,16 +1,16 @@
 
-
 supportWord = 'i', 'am', 'you'
 context = ''
-def define(word, context, base):
+def define(word, base):
     definition = ''
     context = ''
-    f = open('programs/.env/databases/server')
+    f = open('programs/.env/databases/' + base + '.txt')
     database = f.read()
+    word = extract(word)
     
 
 
-
+    
 
 def extract(str):
     extracted = ''
