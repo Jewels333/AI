@@ -4,7 +4,7 @@ context = ''
 def define(word, base):
     definition = ''
     context = ''
-    f = open('programs/.env/databases/' + base + '.txt')
+    f = open('programs/environment1/databases/' + base + '.txt')
     database = f.read()
     word = extract(word)
     
