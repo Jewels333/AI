@@ -29,7 +29,7 @@ if AccessInput == AccessKey:
             accountManaged = input('What account to manage?')
             try:
                 
-                f.open(terminalFolder + accountsFolder + accountManaged + ".key")
+                f = open(terminalFolder + accountsFolder + accountManaged + ".key")
                 
                
                 accountMenu = input('Would you like to:\nR)ead info\nA)dd info')
