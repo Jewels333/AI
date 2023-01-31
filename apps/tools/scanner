@@ -1,0 +1,11 @@
+import nmap
+
+begin = input('Enter Beginning:')
+end = input('Enter End:')
+target = input('Enter target:')
+scanner = nmap.PortScanner()
+for i in range(begin,end+1):
+	# scan the target port
+	res = scanner.scan(target,str(i))
+	res = res['scan'][target]['tcp'][i]['state']
+	print(f'port {i} is {res}.')
