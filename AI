@@ -1,7 +1,23 @@
 import sys
 import sqlite3
 from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+#from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+def create(type, name):
+    print()
+
+def modify(base, action, value):
+    print()
+
+def data(base, extract):
+    connection = sqlite3.connect(base + ".db")
+    crsr = connection.cursor()
+    try:
+        sql_command = """SELECT {extract} FROM {base};"""
+    except:
+        print('failure')
+    crsr.execute(sql_command)
+    connection.close()
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
