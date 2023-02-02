@@ -1,7 +1,9 @@
 import sys
 import sqlite3
+import PyQt6
 from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton
+import sys
 selffile = 'AI'
 def createtable(base, name):
      connection = sqlite3.connect(base + ".db")
@@ -40,21 +42,43 @@ def data(base, extract):
     crsr.execute(sql_command)
     connection.close()
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-
-        self.setWindowTitle("AI")
-        button = QPushButton("Testing")
-        self.setCentralWidget(button)
-def showwindow(window):
-    app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
-    app.exec()
 
 def failure(type):
     if type == 'SQLFail':
         print()
     if type == 'WindowFail':
         print()
+
+#set main window
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("App")
+        button = QPushButton("Test")
+        button.setCheckable(True)
+        #you can use multiple of these to add different responses each time
+        #released: self.button.released.connect(self.buttonreleased)
+        button.clicked.connect(self.buttonclicked)
+        button.setChecked(self.buttonchecked)
+
+        #window size
+        #can also use setMinimumSize() and .setMaximumSize()
+        self.setFixedSize(QSize(400, 300))
+
+        #center widget
+        self.setCentralWidget(button)
+        def buttonclicked(self):
+            self.button.setText("You already clicked me.")
+            self.button.setEnabled(False)
+
+            
+            self.setWindowTitle("My Oneshot App")
+        def buttonchecked(self, checked):
+            self.button_is_checked = checked
+            print(self.button_is_checked)
+
+app = QApplication(sys.argv)
+window = MainWindow()
+window.show()
+app.exec()
