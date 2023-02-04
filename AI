@@ -2,7 +2,8 @@ import sys
 import sqlite3
 import PyQt6
 from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton
+from PyQt6.QtGui import QAction
+from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QTextEdit, QMenu
 import sys
 selffile = 'AI'
 def createtable(base, name):
@@ -45,38 +46,18 @@ def data(base, extract):
 
 def failure(type):
     if type == 'SQLFail':
-        print()
+        print('SQL Failed. Collecting data...')
     if type == 'WindowFail':
-        print()
+        print('Window Failed, Collection data...')
 
 #set main window
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
-        self.setWindowTitle("App")
-        button = QPushButton("Test")
-        button.setCheckable(True)
-        #you can use multiple of these to add different responses each time
-        #released: self.button.released.connect(self.buttonreleased)
-        button.clicked.connect(self.buttonclicked)
-        button.setChecked(self.buttonchecked)
-
-        #window size
-        #can also use setMinimumSize() and .setMaximumSize()
-        self.setFixedSize(QSize(400, 300))
-
-        #center widget
-        self.setCentralWidget(button)
-        def buttonclicked(self):
-            self.button.setText("You already clicked me.")
-            self.button.setEnabled(False)
-
-            
-            self.setWindowTitle("My Oneshot App")
-        def buttonchecked(self, checked):
-            self.button_is_checked = checked
-            print(self.button_is_checked)
+        self.setWindowTitle("AI")
+        
+      
+        
 
 app = QApplication(sys.argv)
 window = MainWindow()

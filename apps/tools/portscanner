@@ -18,6 +18,7 @@ def port_scan(port):
     except:
         return False
 type1 = input('Which type?(1/2)')
+print('Starting')
 if type1 == '1':
 
     start = time.time()
