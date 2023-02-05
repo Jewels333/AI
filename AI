@@ -1,10 +1,12 @@
 import sys
+import time
+import datetime
 import sqlite3
 import PyQt6
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtGui import QAction
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QTextEdit, QMenu
-import sys
+
 selffile = 'AI'
 def createtable(base, name):
      connection = sqlite3.connect(base + ".db")
@@ -38,17 +40,35 @@ def data(base, extract):
     crsr = connection.cursor()
     try:
         sql_command = """SELECT {extract} FROM {base};"""
-    except:
+    except Exception as ex:
         print('failure')
+        error = sys.exc_info()
+        failure(SQLFail, data)
     crsr.execute(sql_command)
     connection.close()
 
 
-def failure(type):
+def failure(type, subtype):
     if type == 'SQLFail':
-        print('SQL Failed. Collecting data...')
+       if subtype == data:
+        errorData = {
+            "base": "{base}",
+            "extract": "{extract}",
+            "type": "{type}",
+            "subtype": "{subtype}",
+            "time": datetime.datetime().now(),
+            "error": "{error}"
+        }
+        time = datetime.datetime().now()
+        print('SQL Failed, Collecting data...')
+        connection = sqlite3.connect("server.db")
+        crsr = connection.cursor()
+        sql_command = """INSERT INTO sqlErrors
+        VALUES ({base}, {extract}, {subtype}, {time}, {error});"""
+        crsr.execute(sql_command)
+        connection.close()
     if type == 'WindowFail':
-        print('Window Failed, Collection data...')
+        print('Window Failed, Collecting data...')
 
 #set main window
 class MainWindow(QMainWindow):
