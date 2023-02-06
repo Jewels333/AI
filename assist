@@ -2,8 +2,8 @@ import sqlite3
 connection = sqlite3.connect("server.db")
 crsr = connection.cursor()
 
-sql_command = """INSERT INTO sqlErrors
-    VALUES ('database', 'ifany', 'subtype', 'time', 'error');"""
+sql_command = """ALTER TABLE user
+RENAME TO users"""
 
 crsr.execute(sql_command)
 connection.commit()
