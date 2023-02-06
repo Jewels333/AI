@@ -69,6 +69,10 @@ def failure(type, subtype):
         connection.close()
     if type == 'WindowFail':
         print('Window Failed, Collecting data...')
+        time = datetime().datetime.now
+        errorData = {
+            "time":"{time}"
+        }
 
 #set main window
 class MainWindow(QMainWindow):
