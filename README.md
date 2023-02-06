@@ -13,7 +13,7 @@
 
 <h2>File Guide</h2>
 
-<p>File - AI
+<p>File AI:
 The Main file for the AI</p>
-<p>File - Assist
+<p>File Assist:
 Assists the AI</p>
