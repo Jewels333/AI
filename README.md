@@ -10,8 +10,6 @@
 
 
 
-<p>Yutubi - The Biggest L<p>
-
 <h2>File Guide</h2>
 
 <p>File AI:
