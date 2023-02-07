@@ -8,6 +8,13 @@ namespace HelloWorld
     {
       Console.WriteLine("Starting Program");
       Console.WriteLine(\r".")
+      Console.WriteLine(\r".")
+      Console.WriteLine(\r".")
+      Console.Clear()
+      Console.WriteLine("Starting Program");
+      Console.WriteLine(\r".")
+      Console.WriteLine(\r".")
+      Console.WriteLine(\r".")
     }
   }
 }
