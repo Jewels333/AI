@@ -5,6 +5,7 @@
 
 <p>Jewels - Lead Developer</p>
 
+<p>LogiDev - Lead Web Developer/Coder<p>
 
 
 
