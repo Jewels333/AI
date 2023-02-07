@@ -5,7 +5,7 @@
 
 <p>Jewels - Lead Developer</p>
 
-<p>LogiDev - Lead Web Developer/Coder<p>
+<p>LogiDev/LegoBuzz5697/RealLogiDev - Lead Web Developer/Coder<p>
 
 
 
