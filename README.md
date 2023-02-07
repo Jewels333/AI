@@ -5,11 +5,10 @@
 
 <p>Jewels - Lead Developer</p>
 
+<p>LogiDev - Web Developer<p>
 
-<p>LegoBuzz & Xn1vity - Web Developers</p>
 
 
-<p>Yutubi - The Biggest L<p>
 
 <h2>File Guide</h2>
 
