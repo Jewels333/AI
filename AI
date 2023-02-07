@@ -25,13 +25,11 @@ def createAccount(UsrID, Uname, Upass, Utype, UsAge):
         failure(account, creation)
 def encrypt(str, type):
     string = str
-    type = type
-    strChars = []
-    string.extend(string)
+    type = type    
     #! stop point
     if type == 'USC-2':
-        for l in s:
-            print()
+        print()
+
 def account(action):
     print()
 def createtable(base, name):
