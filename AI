@@ -27,7 +27,8 @@ def encrypt(str, type):
     string = str
     type = type    
     #! stop point
-    if type == 'USC-2':
+    # User Standard Code 1
+    if type == 'USC-1':
         print()
 
 def account(action):
