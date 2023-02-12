@@ -1,10 +1,30 @@
 class self:
     class brith:
         def activate():
-            brithDict = {
-                "name":"{name}"
+            brithdata = {
+                "name":"",
+                "brithdate":""
+            }
+            data = {
+                "assist":""
             }
 
 class portal:
-    def portal():
-        query = input('Welcome to the Model Portal.\n')
+    def setup():
+        query = input('Welcome to the Model Portal.\nStart Setup?')
+        if query == 'Y':
+            #link: @brithdata
+            name = input('Enter Model Name: ')
+            brithdate = input('Enter Model Brithdate: ')
+            assist = input('Enter Assist: ')
+        else:
+            pass
+
+class assist:
+    class connect:
+        def open():
+            pass
+        def edit():
+            pass
+        def run():
+            pass
