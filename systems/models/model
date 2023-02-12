@@ -1,0 +1,10 @@
+class self:
+    class brith:
+        def activate():
+            brithDict = {
+                "name":"{name}"
+            }
+
+class portal:
+    def portal():
+        query = input('Welcome to the Model Portal.\n')
