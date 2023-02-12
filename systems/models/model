@@ -8,6 +8,9 @@ class self:
             data = {
                 "assist":""
             }
+    class learn:
+        def edit(pl):
+            pass
 
 class portal:
     def setup():
@@ -16,7 +19,9 @@ class portal:
             #link: @brithdata
             name = input('Enter Model Name: ')
             brithdate = input('Enter Model Brithdate: ')
+            #link: @data
             assist = input('Enter Assist: ')
+            
         else:
             pass
 
@@ -28,3 +33,5 @@ class assist:
             pass
         def run():
             pass
+
+self.brith.activate()
