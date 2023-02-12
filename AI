@@ -1,109 +1,13 @@
-import sys
-import time
-import datetime
-import sqlite3
-import PyQt6
-from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtGui import QAction
-from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QTextEdit, QMenu
-server1 = 'server.db'
-server2 = 'server2.db'
-
-self = ''
-def createAccount(UsrID, Uname, Upass, Utype, UsAge):
-    connection = sqlite3.connect(server1)
-    crsr = connection.cursor()
-    try:
-        sql_command = """INSERT INTO users
-        VALUES ('{UsrID}','{Uname}','{Upass}','{Utype}','{UsAge}')"""
-        crsr.execute(sql_command)
-        connection.commit()
-        connection.close()
-
-    except Exception as ex:
-        print(failure)
-        failure(account, creation)
-def encrypt(str, type):
-    string = str
-    type = type    
-    #! stop point
-    # User Standard Code 1
-    if type == 'USC-1':
-        print()
-
-def account(action):
-    print()
-def createtable(base, name):
-     connection = sqlite3.connect(base + ".db")
-     crsr = connection.cursor()
-     try:
-        sql_command = """CREATE TABLE {name} (
-);"""
-     except:
-        print('failure')
-     crsr.execute(sql_command)
-     connection.close()
-
-
-
-
-
-
-def modify(base, action, value):
-    print()
-
-
-def data(base, extract):
-    connection = sqlite3.connect(base + ".db")
-    crsr = connection.cursor()
-    try:
-        sql_command = """SELECT {extract} FROM {base};"""
-    except Exception as ex:
-        print('failure')
-        error = sys.exc_info()
-        failure(SQLFail, data)
-    crsr.execute(sql_command)
-    connection.commit()
-    connection.close()
-
-
-def failure(type, subtype):
-    if type == 'SQLFail':
-       if subtype == data:
-        errorData = {
-            "base": "{base}",
-            "extract": "{extract}",
-            "type": "{type}",
-            "subtype": "{subtype}",
-            "time": datetime.datetime().now(),
-            "error": "{error}"
-        }
-        time = datetime.datetime().now()
-        print('SQL Failed, Collecting data...')
-        connection = sqlite3.connect("server.db")
-        crsr = connection.cursor()
-        sql_command = """INSERT INTO sqlErrors
-        VALUES ({base}, {extract}, {subtype}, {time}, {error});"""
-        crsr.execute(sql_command)
-        connection.commit()
-        connection.close()
-    if type == 'WindowFail':
-        print('Window Failed, Collecting data...')
-        time = datetime().datetime.now
-        errorData = {
-            "time":"{time}"
-        }
-
-#set main window
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("AI")
-        
-      
-        
-
-app = QApplication(sys.argv)
-window = MainWindow()
-window.show()
-app.exec()
+import json
+def activate(name):
+    activation = {
+        "name":"{name}",
+        "brithdate":"{brithdate}",
+        "assist":"assist",
+        "function":"",
+        "version":"0.1",
+        "learn":"True",
+        "encryption":"USC-1"
+    }
+    
+    
