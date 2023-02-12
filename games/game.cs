@@ -6,15 +6,7 @@ namespace HelloWorld
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Starting Program");
-      Console.WriteLine(\r".")
-      Console.WriteLine(\r".")
-      Console.WriteLine(\r".")
-      Console.Clear()
-      Console.WriteLine("Starting Program");
-      Console.WriteLine(\r".")
-      Console.WriteLine(\r".")
-      Console.WriteLine(\r".")
+      
     }
   }
 }
