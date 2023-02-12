@@ -34,4 +34,4 @@ class assist:
         def run():
             pass
 
-self.brith.activate()
+portal.setup()
