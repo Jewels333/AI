@@ -13,8 +13,8 @@ class self:
 fp = 'systems\models\setup'
 envp = 'systems\models\{env}'
 ex = 'systems\models\model'
-
-modelData = ex.read()
+f = open(ex)
+modelData = f.read()
 
     
 
