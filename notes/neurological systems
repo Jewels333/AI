@@ -1,0 +1,15 @@
+input layer:x
+output layer: ŷ
+hidden layers
+weights:W
+biases:b
+    |O| |O| 
+|O| |O| |O| |O|
+|O| |O| |O| |O|
+|O| |O| |O| |O|
+    |O| |O|
+ x   hidden  ŷ
+   ^       ^
+    weights
+    bias
+ 
