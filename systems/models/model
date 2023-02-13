@@ -1,37 +1,5 @@
-class self:
-    class brith:
-        def activate():
-            brithdata = {
-                "name":"",
-                "brithdate":""
-            }
-            data = {
-                "assist":""
-            }
-    class learn:
-        def edit(pl):
-            pass
-
 class portal:
-    def setup():
-        query = input('Welcome to the Model Portal.\nStart Setup?')
-        if query == 'Y':
-            #link: @brithdata
-            name = input('Enter Model Name: ')
-            brithdate = input('Enter Model Brithdate: ')
-            #link: @data
-            assist = input('Enter Assist: ')
-            
-        else:
-            pass
-
-class assist:
-    class connect:
-        def open():
-            pass
-        def edit():
-            pass
-        def run():
-            pass
-
-portal.setup()
+    def menu():
+        menu = input('')
+    class api:
+        pass
