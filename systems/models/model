@@ -17,3 +17,18 @@ class NeuralNetwork:
         
         self.weights1 += d_weights1
         self.weights2 += d_weights2
+class portal:
+    def menu():
+        menu = input("""
+         ___________________________________________
+        | {time}            Menu         Portal             
+        |      (T)erminate model                    |
+        |      (R)eshape model                      |
+        |      (C)ommence model                     |
+        |      (S)hape                              |
+        |___________________________________________|
+        """)
+class self:
+    pass
+class assist:
+    pass
