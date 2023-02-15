@@ -23,15 +23,22 @@ class portal:
         time = datetime.datetime().now()
         menu = input("""
          ___________________________________________
-        | {time}            Menu         Portal             
+        | {time}            Menu             
         |      (T)erminate/(K)ill model             |
         |      (R)eshape model                      |
         |      (C)ommence model                     |
         |      (S)hape                              |
         |___________________________________________|""")
     def connect(fp, action):
-        file = open(fp)
-        
+        connection = open(fp)
+        if action == 'read':
+            value = connection.read()
+        if action == 'readM':
+            value = connection.read()
+            fileLines = len(connection.readlines())
+            
+        if action == 'write':
+            value = connection.append()
          
 class self:
     pass
