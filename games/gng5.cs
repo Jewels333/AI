@@ -10,7 +10,9 @@ class MainClass {
     bool inSight = False
     string[] charS = {"name", "name", "name", "user","granny","grandpa"}
     string[] map = {"sewer", "petStore"} 
-    //if dist == reach || inSight == True
+    /if (dist == reach || inSight == True) {
+            apporach 
+    }
     
   }
 }
