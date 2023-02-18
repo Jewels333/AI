@@ -53,3 +53,4 @@ class assist:
             pass
 
 self.brith.activate()
+portal().setup()

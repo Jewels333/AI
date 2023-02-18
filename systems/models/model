@@ -1,4 +1,5 @@
 import datetime
+
 class NeuralNetwork:
     def __init__(self, x, y):
         self.input      = x
@@ -20,7 +21,9 @@ class NeuralNetwork:
         self.weights2 += d_weights2
 class portal:
     def menu():
-        time = datetime.datetime().now()
+        date = datetime.date().today()
+        clock = datetime.time().today()
+        time = str(date + ',' + clock)
         menu = input("""
          ___________________________________________
         | {time}            Menu             
