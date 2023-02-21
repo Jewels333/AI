@@ -27,7 +27,7 @@ class portal:
         menu = input("""
          ___________________________________________
         | {time}            Menu             
-        |      (T)erminate/(K)ill model             |
+        |      (T)erminate model                    |
         |      (R)eshape model                      |
         |      (C)ommence model                     |
         |      (S)hape                              |
