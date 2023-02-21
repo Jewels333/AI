@@ -1,0 +1,55 @@
+class basic: 
+    def base():
+        #basic window open and execute
+        import sys
+
+        from PyQt6.QtCore import QSize, Qt
+        from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+
+        app = QApplication(sys.argv)
+
+        window = MainWindow()
+        window.show()
+
+        app.exec()
+        """ Output
+        ______________
+       |______________|
+       |              |
+       |              |
+       |______________|
+        """
+    def blank():
+        import sys
+
+        from PyQt6.QtCore import QSize, Qt
+        from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+        class MainWindow(QMainWindow):
+            def __init__(self):
+                super().__init__()
+                self.setWindowTitle("title")
+                #button
+                button = QPushButton("label")
+                #central widget 
+                self.setCentralWidget(button)
+            app = QApplication(sys.argv)
+
+            window = MainWindow()
+            window.show()
+
+            app.exec()
+            """ Output
+            _____________________
+           |_________title_______|
+           |      ________       |
+           |     |__label_|      |
+           |                     |
+           |_____________________|
+            """
+    def setsize(size1, size2, type):
+        if type == 'fixed':
+            self.setFixedSize(QSize(size1, size2))
+        if type == 'minium':
+            self.setMiniumSize()
+        if type == 'maxium':
+            self.setMaxiumSize()
