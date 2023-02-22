@@ -21,18 +21,18 @@ class NeuralNetwork:
         self.weights2 += d_weights2
 class portal:
     def menu():
-        date = datetime.date().today()
-        clock = datetime.time().today()
+        date = ''
+        clock = ''
         time = str(date + ',' + clock)
         menu = input("""
          ___________________________________________
         | {time}            Menu             
-        |      (T)erminate model                    |
-        |      (R)eshape model                      |
-        |      (C)ommence model                     |
-        |      (S)hape                              |
-        |___________________________________________|""")
-    def connect(fp, action):
+        |      (T)erminate model                        |
+        |      (R)eshape model                          |
+        |      (C)ommence model                         |
+        |      (S)hape                                  |
+        |_______________________________________________|""")
+    def connect(fp, action, value):
         connection = open(fp)
         if action == 'read':
             value = connection.read()
@@ -41,7 +41,7 @@ class portal:
             fileLines = len(connection.readlines())
             
         if action == 'write':
-            value = connection.append()
+            value = connection.append('\n' + value)
          
 class self:
     pass

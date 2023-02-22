@@ -25,6 +25,6 @@ def extract(str):
         else:
             word.slice()
         x = x + 1
-    print(extracted)
+print(extract(' Hi there'))
 
         

@@ -1,2 +1,0 @@
-Error 302
-Something went wrong with signing in to your account.

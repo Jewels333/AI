@@ -6,3 +6,6 @@ function navBarHome() {
     x.className = "topnav";
   }
 }
+function name() {
+  
+}
