@@ -12,7 +12,7 @@ builders {
 boat {
     material {
         // current
-        'bottles':'' // per bottle
+        'bottles':'180' // per bottle
         'tape':'' // per inch
         '':''
     }
