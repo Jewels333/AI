@@ -15,6 +15,5 @@ boat {
         'bottles':'180' // per bottle
         'tape':'' // per inch
         '':''
-    }
+        }
 }
-5

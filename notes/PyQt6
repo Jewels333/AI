@@ -21,7 +21,6 @@ class basic:
         """
     def blank():
         import sys
-
         from PyQt6.QtCore import QSize, Qt
         from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
         class MainWindow(QMainWindow):
@@ -40,10 +39,10 @@ class basic:
             app.exec()
             """ Output
             _____________________
-           |_________title_______|
-           |      ________       |
-           |     |__label_|      |
-           |                     |
+           |_______title_________|
+           |      _______        |
+           |     | label |       |
+           |     |_______|       |
            |_____________________|
             """
     def setsize(size1, size2, type):
@@ -53,3 +52,4 @@ class basic:
             self.setMiniumSize()
         if type == 'maxium':
             self.setMaxiumSize()
+        
