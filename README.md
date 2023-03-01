@@ -3,8 +3,8 @@
 
 <h2>Contributors</h2>
 
-<p>Jewels - Lead Developer</p>
-<p>Yutubi - Web Developer</p>
+<p>Jewels - Lead Developer/Owner</p>
+<p>Yutubi - Lead Web Developer</p>
 <p>LogiDev - Web Developer<p>
 <p>Xn1vity - Web Developer</p>
 
