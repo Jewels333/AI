@@ -2,11 +2,12 @@
 <html>
     <head>
         <title>About - Scripted AI</title>
+        <link rel="website/assets/stylesheets/index.css" type="stylesheet">
     </head>
     <body>
         <div class="topnav">  <!-- nav bar -->
-            <a class="active" href="website/index.html">Home</a> 
-            <a href="website/about.html">About</a> 
+            <a href="website/index.html">Home</a> 
+            <a class="active"href="website/about.html">About</a> 
             <a href="website/news.html">News</a> 
             <a href="#filler4"> filler</a> 
           </div>
@@ -20,7 +21,13 @@
             <h3>Xn1vity </h3>
             <h5>Web Developer</h5>
             <p></p>
+            <h3>Logi</h3>
+            <h5>Web Developer</h5>
+            <p></p>
         </div> 
+        <div class="">
+            <h3></h3>
+        </div>
     </body>
 
 </html>
