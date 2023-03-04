@@ -139,3 +139,7 @@ class tool:
         pass
 print('Welcome to the Developer Portal.')
 input = input('Enter your access key:')
+f = open('apps/dev/terminal/access.key')
+key = f.readline()
+if input == key:
+    with
