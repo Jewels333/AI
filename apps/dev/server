@@ -1,0 +1,35 @@
+charList = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+            'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+            '1','2','3','4','5','6','7','8','9','0',
+            '`','~','!','@','#','$','%','^','&','*','(',')','-','_','=','+','[','{',']','}','|',';',':','"',"'",'<','>',',','.','?','/'}
+codeKey2 = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+            'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+            '1','2','3','4','5','6','7','8','9','0',
+            '`','~','!','@','#','$','%','^','&','*','(',')','-','_','=','+','[','{',']','}','|',';',':','"',"'",'<','>',',','.','?','/'}
+ASC_2 = 'apps/dev/terminal/ASC-2.csv'
+def findSet(set, str):
+    count = int(0)
+    for element in set:
+        count = int(count + 1)
+        if element == str:
+            return count
+            continue
+        elif element != str:
+            continue
+def retrieveSet(num, set):
+    count1 = int(0)
+    for element in set:
+        count1 = int(count1 + 1)
+        if count1 == num:
+            return element
+        else:
+            continue
+class maintenance:
+    def daily():
+        count2 = int(0)
+        for element in codeKey2:
+            count = int(count2 + 1)
+            encoded = ''
+            decoded = retrieveSet(count2, charList)
+            print(decoded)
+maintenance.daily()
