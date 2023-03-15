@@ -1,4 +1,11 @@
-import datetime
+import time
+
+# seconds passed since epoch
+seconds = time.time()
+
+
+localtime = time.ctime(seconds)
+print(localtime)
 
 class NeuralNetwork:
     def __init__(self, x, y):
@@ -21,28 +28,24 @@ class NeuralNetwork:
         self.weights2 += d_weights2
 class portal:
     def menu():
-        date = ''
-        clock = ''
-        time = str(date + ',' + clock)
+        
         menu = input("""
          ___________________________________________
-        | {time}            Menu             
+        |  {localtime}       Menu
         |      (T)erminate model                        |
         |      (R)eshape model                          |
         |      (C)ommence model                         |
-        |      (S)hape                                  |
+        |      (S)hape Model                            |
         |_______________________________________________|""")
     def connect(fp, action, value):
         connection = open(fp)
         if action == 'read':
             value = connection.read()
-        if action == 'readM':
-            value = connection.read()
-            fileLines = len(connection.readlines())
-            
+            return value
+        
         if action == 'write':
-            value = connection.append('\n' + value)
-         
+            returned = connection.append('\n' + value)
+            return returned
 class self:
     pass
 class assist:

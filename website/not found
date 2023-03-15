@@ -1,0 +1,15 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <title>Not Found</title>
+    </head>
+    <body>
+        <div class="nfhead">    
+            <h1>Not Found</h1>
+        </div>
+        <div class="nfbody">
+            <p>Page wasn't found. Please try again.</p>
+        </div>
+        
+    </body>
+</html>
