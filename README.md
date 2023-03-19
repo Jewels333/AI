@@ -4,9 +4,9 @@
 <h2>Contributors</h2>
 
 <p>Jewels - Lead Developer/Owner</p>
-<p>Yutubi - Lead Web Developer</p>
+<p>Yutubi - Lead Web Developer (I oppose this) -Xn1vity</p>
 <p>LogiDev - Web Developer<p>
-<p>Xn1vity - Web Developer</p>
+<p>Xn1vity - Web Developer (Promote me)</p>
 
 
 
