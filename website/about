@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>About - Scripted AI</title>
-        <link rel="website/assets/stylesheets/index.css" type="stylesheet">
-    </head>
-    <body>
-        <div class="topnav">  <!-- nav bar -->
-            <a href="website/index.html">Home</a> 
-            <a class="active"href="website/about.html">About</a> 
-            <a href="website/news.html">News</a> 
-            <a href="#filler4"> filler</a> 
+ <nav class="navbar">
+        <div class="logo">Scripted</div>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkboxtoggle" />
+          <label for="checkboxtoggle" class="hamburger">&#9776;</label>
+          <div class="menu">
+            <li><a href="">Login/Sign Up</a></li>
+            <li><a href="/website/">Dashbroad</a></li>
+            <li class="services">Services
+              <ul class="dropdown">
+                <li><a href="/apps/chat/cli.php" type="webpage">Chat</a></li>
+                <li><a href="/">Dropdown 2</a></li>
+                <li><a href="/">Dropdown 2</a></li>
+                <li><a href="/">Dropdown 3</a></li>
+                <li><a href="/">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="/website/about">About</a></li>
+            <li><a href="/website/contact">Contact</a></li>
           </div>
-        <div class="contributors">
-            <h3>Jewels </h3>
-            <h5>Lead Developer and Owner</h5>
-            <p></p>
-            <h3>Yutubi06 </h3>
-            <h5>Lead Web Developer</h5>
-            <p></p>
-            <h3>Xn1vity </h3>
-            <h5>Web Developer</h5>
-            <p></p>
-            <h3>Logi</h3>
-            <h5>Web Developer</h5>
-            <p></p>
-        </div> 
-        <div class="">
-            <h3></h3>
-        </div>
-    </body>
+        </ul>
+      </nav>
 
 </html>
