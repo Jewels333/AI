@@ -4,4 +4,5 @@ RUN apt-get update
 RUN apt-get install –y apache2 
 RUN apt-get install –y apache2-utils 
 RUN apt-get clean 
-EXPOSE [“apache2ctl”, “-D”, “FOREGROUND”]
+EXPOSE 80/tcp
+EXPOSE 80/ucp
