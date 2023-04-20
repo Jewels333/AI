@@ -2,7 +2,7 @@ FROM ubuntu
 MAINTAINER jewelsytofficial@gmail
 RUN apt-get update 
 
-RUN apt-get upgrade
+
 RUN apt-get APR
 RUN apt-get APR-Util
 RUN apt-get update apache2
