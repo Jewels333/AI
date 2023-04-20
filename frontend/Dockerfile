@@ -1,8 +1,8 @@
 FROM ubuntu 
 MAINTAINER jewelsytofficial@gmail
 RUN apt-get update 
-#RUN apt-get install –y apache2 
-#RUN apt-get install –y apache2-utils 
+RUN sudo apt install apache2
+RUN sudo service apache2 start
 RUN apt-get clean 
 EXPOSE 80/tcp
 
