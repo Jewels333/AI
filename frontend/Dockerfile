@@ -1,6 +1,7 @@
 FROM ubuntu 
 MAINTAINER jewelsytofficial@gmail
 RUN apt-get update 
+RUN apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 #RUN apt-get upgrade
 #RUN apt-get install apache2
 #RUN service apache2 start
