@@ -1,14 +1,9 @@
-FROM ubuntu 
-MAINTAINER jewelsytofficial@gmail
-RUN apt-get update 
+FROM ubuntu
+RUN apt-get install docker
 
 
-RUN apt-get APR
-RUN apt-get APR-Util
-RUN apt-get update apache2
-RUN apt-get install apache2
-RUN service apache2 start
-
-RUN apt-get clean 
-EXPOSE 80/tcp
-
+FROM busybox
+CMD echo "Hello world (v1 Image)"
+FROM docker
+RUN docker build -t marked9999/AI
+RUN docker push marked9999/AI
