@@ -5,7 +5,7 @@
 
 <p>Jewels - Lead Developer/Owner</p>
 <p>Yutubi - Web Developer (you aint finna be main web dev suck it)</p>
-<p>LogiDev - Deceased (dead lol)<p>
+<p>LogiDev - Deceased (dead and fired cuz he bad lol)<p>
 <p>Xn1vity - Lead Web Developer</p>
 
 
@@ -13,15 +13,17 @@
 
 <h2>File Guide</h2>
 
-<p>File AI:
-The Main file for the AI</p>
-<p>File Assist:
-Assists the AI</p>
-<p>Folder Data:
-Data/servers for the AI</p>
-<p>File server.db:
-Main Server For the AI. (Errors, Account Data, File Guide, Use Data)</p>
-<p>File server2.db:
-Secondary Server for the AI and other programs. (AI:Backup Data, Unique errors, User Feedback. Other: Use Data)</p>
-<p>File manifest.json:
-Basic AI info goes there</p>
+<h4>Backend</h4>
+<p> Backend files for the Frontend. Includes:<br>
+- AI program  <br>
+- AI assist   <br>
+- Chat Server <br>
+- Servers     <br>
+- Data        <br>
+</p>
+<h4>Frontend</h4>
+<p> Frontend files for the Client. Includes:<br>
+- AI patch 
+- Chat client
+- Main page
+</p>
