@@ -27,3 +27,5 @@
 - Chat client
 - Main page
 </p>
+<h5>render.yaml</h5>
+<p>Render blueprint for hosting</p>
