@@ -23,6 +23,7 @@
     |      Yutubi                            <br>
     |     Web Dev                            <br>
   Logi                                       <br>
+  (lowly)                                    <br>
   Assistant                                  <br>
   Web Dev                                    <br>
   
