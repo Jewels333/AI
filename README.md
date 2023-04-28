@@ -19,14 +19,10 @@
   Lead Web Dev                               <br>
         |                                    <br>
   --------------                             <br>
-    |         |                              <br>
-    |      Yutubi                            <br>
-    |     Web Dev                            <br>
-  Logi                                       <br>
-  (lowly)                                    <br>
-  Assistant                                  <br>
-  Web Dev                                    <br>
-  
+              |                              <br>
+           Yutubi                            <br>
+          Web Dev                            <br>
+
 </p>
 
 
