@@ -5,7 +5,7 @@
 
 <p>Jewels - Lead Developer/Owner</p>
 <p>Yutubi - Web Developer (you aint finna be main web dev suck it)</p>
-<p>LogiDev - Deceased (dead and fired cuz he bad lol)<p>
+<p>LogiDev -Web Developer and probably dead<p>
 <p>Xn1vity - Lead Web Developer</p>
 
 <h3>Roles</h3>
