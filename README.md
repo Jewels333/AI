@@ -20,8 +20,8 @@
         |                                    <br>
   --------------                             <br>
               |                              <br>
-           Yutubi                            <br>
-          Web Dev                            <br>
+           Yutubi/LogiDev                            <br>
+              Web Dev                            <br>
 
 </p>
 
