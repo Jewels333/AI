@@ -1,0 +1,24 @@
+{
+    "name": "scriptedai",
+    "version": "0.0.1",
+    "description": "Scripted AI",
+    "private": "false",
+    "main": "frontend/index.html",
+    "scripts": {
+        "start":"node index.html",
+        "dev": "nodemon index.html",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marked9999/AI"
+    },
+    "keywords": [
+        "node",
+        "javascript",
+        "npm",
+        "yarn"
+    ],
+    "author": "Jewels",
+    "license": "ISC"
+}
