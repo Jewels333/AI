@@ -19,10 +19,11 @@
   Lead Web Dev                               <br>
         |                                    <br>
   --------------                             <br>
-              |                              <br>
-           Yutubi/LogiDev                            <br>
-              Web Dev                            <br>
-
+   |           |                              <br>
+   |        Yutubi                            <br>
+   |           Web Dev                            <br>
+LogiDev
+Assistant web dev
 </p>
 
 
