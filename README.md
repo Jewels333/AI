@@ -19,10 +19,11 @@
   Lead Web Dev                               <br>
         |                                    <br>
   --------------                             <br>
-              |                              <br>
-           Yutubi                            <br>
-          Web Dev                            <br>
-
+   |           |                              <br>
+   |        Yutubi                            <br>
+   |           Web Dev                            <br>
+LogiDev
+Assistant web dev
 </p>
 
 
@@ -44,3 +45,5 @@
 </p>
 <h5>render.yaml</h5>
 <p>Render blueprint for hosting</p>
+
+<h2>Contacts</h2>
