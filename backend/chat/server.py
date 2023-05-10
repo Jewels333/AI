@@ -1,6 +1,12 @@
 import socket
 from threading import Thread
+from flask import Flask
+app = Flask(__name__)
 
+@app.route('/')
+def start():
+    print('starting...')
+start()
 serverhost = '127.0.0.1'
 serverport = 3333
 separatortoken = '<SEP>'
