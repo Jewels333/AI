@@ -1,3 +1,4 @@
+__name__ = 'chat'
 import socket
 from threading import Thread
 from flask import Flask
