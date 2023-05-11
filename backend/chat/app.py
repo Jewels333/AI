@@ -1,4 +1,5 @@
 __name__ = 'chat'
+#this is the server that will be ran
 import socket
 from threading import Thread
 from flask import Flask
