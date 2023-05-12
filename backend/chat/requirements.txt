@@ -1,7 +1,4 @@
 wheel
 flask
-
-poetry
-gunicorn
 sh
 shell
