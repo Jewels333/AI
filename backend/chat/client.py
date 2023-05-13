@@ -12,7 +12,7 @@ colors = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLACK_EX,
 ]
 clientcolor = random.choice(colors)
 
-serverhost = "127.0.0.1"
+serverhost = input('Enter host:')
 serverport = 3333
 separatortoken = "<SEP>"
 
@@ -36,10 +36,10 @@ t.start()
 while True:
     tosend = input()
 
-    if to_send.lower() == 'q':
+    if tosend.lower() == 'q':
         break
 
     datenow = datetime.now().strftime('%Y-%m-%d %H:%M:%S') 
-    to_send = f"{clientcolor}[{datenow}] {name}{separatortoken}{tosend}{Fore.RESET}"
+    tosend = f"{clientcolor}[{datenow}] {name}{separatortoken}{tosend}{Fore.RESET}"
     s.send(tosend.encode())
 s.close()

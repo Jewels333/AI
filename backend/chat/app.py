@@ -9,7 +9,9 @@ app = Flask(__name__)
 def start():
     print('starting...')
 start()
-serverhost = '127.0.0.1'
+hostname = socket.gethostname()
+ip = socket.gethostbyname(hostname)
+serverhost = ip
 serverport = 3333
 separatortoken = '<SEP>'
 clientsockets = set()
@@ -30,7 +32,7 @@ def listenforclient(cs):
             client_sockets.remove(cs)
         msg = msg.replace(separatortoken, ": ")
         
-        for client_socket in client_sockets:
+        for client_socket in clientsockets:
             client_socket.send(msg.encode())
 
 while True:
@@ -42,34 +44,6 @@ while True:
 
     t.daemon = True
     t.start()
-for cs in client_sockets:
+for cs in clientsockets:
     cs.close()
-s.close()
-
-s = socket.socket()
-print(f"[*] Connecting to {serverhost}:{serverport}...")
-
-s.connect((serverhost, serverport))
-print("[+] Connected.")
-# gonna remake this soon
-name = input("Enter your name: ")
-def listenformessages():
-    while True:
-        message = s.recv(1024).decode()
-        print("\n" + message)
-
-t = Thread(target=listenformessages)
-t.daemon = True
-
-t.start()
-
-while True:
-    tosend = input()
-
-    if to_send.lower() == 'q':
-        break
-
-    datenow = datetime.now().strftime('%Y-%m-%d %H:%M:%S') 
-    to_send = f"{clientcolor}[{datenow}] {name}{separatortoken}{tosend}{Fore.RESET}"
-    s.send(tosend.encode())
 s.close()
