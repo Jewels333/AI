@@ -1,2 +1,2 @@
-echo export FLASK_APP=server.py
-echo flask run
+run export FLASK_APP=server.py
+run flask run
