@@ -1,2 +1,3 @@
-echo export FLASK_APP=app.py
-echo flask run 
+#!/bin/bash
+export FLASK_APP=app.py
+flask run 
