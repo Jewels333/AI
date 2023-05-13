@@ -2,5 +2,5 @@
 pip install flask
 echo '#!/bin/sh'
 
-python -m flask --app app run
+python -m flask run --host=0.0.0.0
 echo app setup complete.
