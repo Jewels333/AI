@@ -1,2 +1,2 @@
-run export FLASK_APP=app.py
-run flask run 
+echo export FLASK_APP=app.py
+echo flask run 
