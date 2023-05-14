@@ -2,5 +2,5 @@
 
 pip install flask
 pip install socket
-iptables -I INPUT -j ACCEPT
+bash iptables -I INPUT -j ACCEPT
 python -m flask run --host=0.0.0.0
