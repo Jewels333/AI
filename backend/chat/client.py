@@ -13,7 +13,7 @@ colors = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLACK_EX,
 clientcolor = random.choice(colors)
 
 serverhost = input('Enter host:')
-serverport = 3333
+serverport = int(input('Enter port:'))
 separatortoken = "<SEP>"
 
 s = socket.socket()
