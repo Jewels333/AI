@@ -2,5 +2,4 @@ wheel
 flask
 sh
 shell
-iptables
 iptable
