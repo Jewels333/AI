@@ -2,5 +2,6 @@
 
 pip install flask
 pip install socket
-bash ./backend/chat/ iptables -I INPUT -j ACCEPT
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A OUTPUT -o lo -j ACCEPT
 python -m flask run --host=0.0.0.0
