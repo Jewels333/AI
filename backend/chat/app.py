@@ -56,9 +56,9 @@ while True:
             clientsockets.discard(tokick)
             print('[-]Sucess!')
         if option == '2':
-            False
+            for cs in clientsockets:
+                cs.close()
+            s.close()
 
-for cs in clientsockets:
-    cs.close()
-s.close()
+
 
