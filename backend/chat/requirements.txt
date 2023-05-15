@@ -3,3 +3,4 @@ flask
 sh
 shell
 bash
+--upgrade pip
