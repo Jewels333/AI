@@ -28,11 +28,10 @@ def listenforclient(cs):
             msg = cs.recv(1024).decode()
         except Exception as e:
             print(f"[!] Error: {e}")
-            clientsockets.remove(cs)
+        #    clientsockets.remove(cs)
         msg = msg.replace(separatortoken, ": ")
-        
-        for cs in clientsockets:
-            cs.send(msg.encode())
+        for client_socket in clientsockets:
+            client_socket.send(msg.encode())
 
 while True:
     client_socket, client_address = s.accept()
@@ -47,6 +46,9 @@ while True:
 for cs in clientsockets:
     cs.close()
 s.close()
+
+
+
 
 
 

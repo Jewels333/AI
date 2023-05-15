@@ -34,7 +34,7 @@ t.start()
 
 while True:
     tosend = input()
-    print('\r')
+
     if tosend.lower() == 'q':
         break
     #if censored in tosend:
