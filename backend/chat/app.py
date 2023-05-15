@@ -29,7 +29,7 @@ def listenforclient(cs):
             msg = cs.recv(1024).decode()
         except Exception as e:
             print(f"[!] Error: {e}")
-            client_sockets.remove(cs)
+            clientsockets.remove(cs)
         msg = msg.replace(separatortoken, ": ")
         
         for client_socket in clientsockets:
@@ -44,6 +44,21 @@ while True:
 
     t.daemon = True
     t.start()
+    while True:
+        print('[#] Menu\n[1] Kick User\n[2] Shut down server')
+        option = input()
+        if option == '1':
+            print('[#]Select User:')
+            for client_socket in clientsockets:
+                print(client_socket)
+            tokick = input('Enter IP:\n')
+            print('[*] Kicking...')
+            clientsockets.discard(tokick)
+            print('[-]Sucess!')
+        if option == '2':
+            break
+
 for cs in clientsockets:
     cs.close()
 s.close()
+

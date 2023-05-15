@@ -3,6 +3,8 @@ import random
 from threading import Thread
 from datetime import datetime
 from colorama import Fore, init, Back
+import urllib
+import requests
 
 init()
 colors = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLACK_EX, 
@@ -11,11 +13,9 @@ colors = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLACK_EX,
     Fore.LIGHTYELLOW_EX, Fore.MAGENTA, Fore.RED, Fore.WHITE, Fore.YELLOW
 ]
 clientcolor = random.choice(colors)
-
 serverhost = input('Enter host:')
 serverport = int(input('Enter port:'))
 separatortoken = "<SEP>"
-
 s = socket.socket()
 print(f"[*] Connecting to {serverhost}:{serverport}...")
 
@@ -38,7 +38,8 @@ while True:
 
     if tosend.lower() == 'q':
         break
-
+    #if censored in tosend:
+    #    break
     datenow = datetime.now().strftime('%Y-%m-%d %H:%M:%S') 
     tosend = f"{clientcolor}[{datenow}] {name}{separatortoken}{tosend}{Fore.RESET}"
     s.send(tosend.encode())
