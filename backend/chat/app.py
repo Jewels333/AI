@@ -44,21 +44,10 @@ while True:
 
     t.daemon = True
     t.start()
-    while True:
-        print('[#] Menu\n[1] Kick User\n[2] Shut down server')
-        option = input()
-        if option == '1':
-            print('[#]Select User:')
-            for client_socket in clientsockets:
-                print(client_socket)
-            tokick = input('Enter IP:\n')
-            print('[*] Kicking...')
-            clientsockets.discard(tokick)
-            print('[-]Sucess!')
-        if option == '2':
-            for cs in clientsockets:
-                cs.close()
-            s.close()
+    
+for cs in clientsockets:
+    cs.close()
+s.close()
 
 
 
