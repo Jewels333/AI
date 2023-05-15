@@ -5,4 +5,4 @@ pip install flask
 #python sudo apt-get update
 #python sudo apt-get install iptables
 #iptables -I INPUT -j ACCEPT
-python -m flask run --host=0.0.0.0
+flask --app app run
