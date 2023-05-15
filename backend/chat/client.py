@@ -1,3 +1,4 @@
+#flask --app backend/chat/app run --host=0.0.0.0 for local
 import socket
 import random
 from threading import Thread
@@ -5,7 +6,6 @@ from datetime import datetime
 from colorama import Fore, init, Back
 import urllib
 import requests
-
 init()
 colors = [Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.LIGHTBLACK_EX, 
     Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTGREEN_EX, 
@@ -26,20 +26,20 @@ name = input("Enter your name: ")
 def listenformessages():
     while True:
         message = s.recv(1024).decode()
-        print("\n" + message)
+        print(message)
 
 t = Thread(target=listenformessages)
 t.daemon = True
-
 t.start()
 
 while True:
     tosend = input()
-
+    print('\r')
     if tosend.lower() == 'q':
         break
     #if censored in tosend:
-    #    break
+    #    break1
+    
     datenow = datetime.now().strftime('%Y-%m-%d %H:%M:%S') 
     tosend = f"{clientcolor}[{datenow}] {name}{separatortoken}{tosend}{Fore.RESET}"
     s.send(tosend.encode())
