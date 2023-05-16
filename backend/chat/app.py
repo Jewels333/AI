@@ -31,8 +31,8 @@ def listenforclient(cs):
             print(f"[!] Error: {e}")
             clientsockets.remove(cs)
         msg = msg.replace(separatortoken, ": ")
-        #clientsockets_copy = clientsockets
-        for client_socket in clientsockets:
+        clientsockets_copy = clientsockets
+        for client_socket in clientsockets_copy:
             client_socket.send(msg.encode())
 
 while True:
