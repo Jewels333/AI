@@ -13,7 +13,8 @@ ip = socket.gethostbyname(hostname)
 serverhost = ip
 serverport = 3333
 separatortoken = '<SEP>'
-clientsockets = set()
+clientsockets = set([])
+
 
 s = socket.socket()
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -21,7 +22,7 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.bind((serverhost, serverport))
 s.listen(5)
 print(f"[*] Listening as {serverhost}:{serverport}")
-
+#("""
 def listenforclient(cs):
     while True:
         try:
@@ -30,8 +31,8 @@ def listenforclient(cs):
             print(f"[!] Error: {e}")
             clientsockets.remove(cs)
         msg = msg.replace(separatortoken, ": ")
-        clientsockets_copy = clientsockets
-        for client_socket in clientsockets_copy:
+        #clientsockets_copy = clientsockets
+        for client_socket in clientsockets:
             client_socket.send(msg.encode())
 
 while True:
@@ -47,11 +48,5 @@ while True:
 for cs in clientsockets:
     cs.close()
 s.close()
-
-
-
-
-
-
-
-
+#""")
+#print(clientsockets)
