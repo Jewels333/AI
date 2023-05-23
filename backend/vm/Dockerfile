@@ -1,3 +1,4 @@
 #pip insta
 #bundle install ruby
-sudo gem install virtualbox
+#sudo gem install virtualbox
+gem install virtualbox
