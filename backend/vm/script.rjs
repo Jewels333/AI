@@ -1,0 +1,13 @@
+require 'virtualbox'
+
+vm = VirtualBox::VM.find("my-vm")
+
+# Let's first print out some basic info about the VM
+puts "Memory: #{vm.memory_size}"
+
+# Let's modify the memory and name...
+vm.memory_size = 360
+vm.name = "my-renamed-vm"
+
+# Save it!
+vm.save
