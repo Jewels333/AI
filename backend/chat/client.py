@@ -1,16 +1,17 @@
 import socket
 
 clientsocket = socket.socket()
-port = 12345
-clientsocket.connect(('127.0.0.1',port))
+port = 3333
+hostip = input('Enter host:')
+clientsocket.connect((hostip,port))
 
 #recieve connection message from server
 recvmsg = clientsocket.recv(1024)
 print(recvmsg)
 
 #send user details to server
-send_msg = input("Enter your user name(prefix with #):")
-clientsocket.send(send_msg)
+sendmsg = bytes(input("Enter your user name:".encode())) 
+clientsocket.send(sendmsg)
 
 
 #receive and send message from/to different user/s
@@ -18,9 +19,9 @@ clientsocket.send(send_msg)
 while True:
     recvmsg = clientsocket.recv(1024)
     print(recvmsg)
-    sendmsg = input("Send your message in format [@user:message] ")
+    sendmsg = input()
     if sendmsg == 'exit':
-        break;
+        break
     else:
         clientsocket.send(send_msg)
 

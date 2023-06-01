@@ -10,7 +10,7 @@ ip = socket.gethostbyname(hostname)
 
 serversocket.bind((ip,port))
 serversocket.listen(5)
-
+print(ip)
 socketlist.append(serversocket)
 
 while True:
@@ -19,7 +19,7 @@ while True:
         if sock == serversocket:
             connect, addr = serversocket.accept()
             socketlist.append(connect)
-            connect.send("[+] User is connected from:" + str(addr))
+            connect.send(bytes("[+] User is connected from:" + str(addr).encode()))
         else:
             try:
                 data = sock.recv(2048)
