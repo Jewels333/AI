@@ -1,0 +1,11 @@
+1 + 1 = 2
+2 + 2 = 4
+There are 26 letters,
+a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
+There are multiple types of numbers,
+Natural numbers are numbers 1 through infinity, no decimals or 0,
+whole numbers are like natural numbers, but they include 0,
+Integers include postive non-decimals, 0, and the negative counterparts of the positive,
+Rational numbers include all numbers that can be expressed as fractions or decimals,
+Irrational numbers are numbers like decimals that don't terminate, pi, the square root of 2
+Synonyms for whole: complete, entire, full, total

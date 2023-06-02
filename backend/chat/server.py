@@ -19,17 +19,20 @@ while True:
         if sock == serversocket:
             connect, addr = serversocket.accept()
             socketlist.append(connect)
-            connect.send(bytes("[+] User is connected from:" + str(addr).encode()))
+            connect.send(bytes("[+] User is connected from:".encode() + str(addr).encode()))
         else:
             try:
                 data = sock.recv(2048)
                 if data.startswith("#"):
-                    users[data[1:].lower()]=connect
+                    users[data[1:].lower()] = connect
                     print("User " + data[1:] +" added.")
                     connect.send("Your user detail saved as : "+str(data[1:]))
-                elif data.startswith("@"):
+                    role = sock.recv(2048)
+                elif data.startswith("[@]"):
                     users[data[1:data.index(':')].lower()].send(data[data.index(':')+1:])
+                    
             except Exception as e:
                 continue
 
 serversocket.close()
+
